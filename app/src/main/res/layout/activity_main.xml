@@ -43,10 +43,10 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="234dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:srcCompat="@drawable/me" />
+                    app:srcCompat="@drawable/me" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

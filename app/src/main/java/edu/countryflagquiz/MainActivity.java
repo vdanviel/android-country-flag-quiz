@@ -1,6 +1,8 @@
 package edu.countryflagquiz;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -51,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                btnBegin.setEnabled(count > 0);//se a quantidade de caracteres for maior que 0 ele da true e libera o butão, se não ele tranca o butão de novo
+                boolean enableButton = s.toString().trim().length() > 0;
+                btnBegin.setEnabled(enableButton);
             }
 
             @Override
@@ -59,17 +62,35 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        //////
+
     }
 
-    public void start(View v){
+    public void start(View view){
 
+        //adicionando o nome do usuario
+        SharedPreferences sharedPref = getSharedPreferences("game_progress",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("name", this.edtName.getText().toString());
+        editor.apply();
+
+        //mudando de tela...
         Intent i = new Intent(getApplicationContext(), Question1.class);
 
         startActivity(i);
-
+        
     }
 
     public void exit(View v){
+
+        //removendo todas as informações antes de sair
+        SharedPreferences sharedPref = getSharedPreferences("game_progress",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("name", null);
+        editor.putStringSet("points", null);
+        editor.apply();
+
         finish();
     }
 

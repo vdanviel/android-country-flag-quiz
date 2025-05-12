@@ -13,13 +13,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import edu.countryflagquiz.MainActivity;
 import edu.countryflagquiz.R;
 
-public class Question1 extends AppCompatActivity {
+public class Question5 extends AppCompatActivity {
 
     private RadioButton correctAnswer;
 
@@ -30,7 +29,7 @@ public class Question1 extends AppCompatActivity {
 
         EdgeToEdge.enable(this);
 
-        setContentView(R.layout.activity_question1);
+        setContentView(R.layout.activity_question5);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -52,12 +51,7 @@ public class Question1 extends AppCompatActivity {
             //pegando a lista de pontos atuais...
             Set<String> currentPointsList = sharedPref.getStringSet("points", null);
 
-            // Inicialize currentPointsList se for nulo
-            if (currentPointsList == null) {
-                currentPointsList = new HashSet<>();
-            }
-
-            currentPointsList.add("1. correct");//adiciona dizendo que a a primeira pergunta foi correta...
+            currentPointsList.add("5. correct");//adiciona dizendo que a a primeira pergunta foi correta...
 
             //modificando a lista...
             SharedPreferences.Editor editor = sharedPref.edit();
@@ -66,10 +60,8 @@ public class Question1 extends AppCompatActivity {
 
             editor.apply();//aplica informações
 
-            System.out.println("correto");
-
             //MUDANDO DE TELA
-            Intent i = new Intent(getApplicationContext(), Question2.class);
+            Intent i = new Intent(getApplicationContext(), Question6.class);
 
             startActivity(i);
 
@@ -81,12 +73,7 @@ public class Question1 extends AppCompatActivity {
             //pegando a lista de pontos atuais...
             Set<String> currentPointsList = sharedPref.getStringSet("points", null);
 
-            // Inicialize currentPointsList se for nulo
-            if (currentPointsList == null) {
-                currentPointsList = new HashSet<>();
-            }
-
-            currentPointsList.add("1. wrong");//adiciona dizendo que a a primeira pergunta foi correta...
+            currentPointsList.add("5. wrong");//adiciona dizendo que a a primeira pergunta foi correta...
 
             //modificando a lista...
             SharedPreferences.Editor editor = sharedPref.edit();
@@ -95,10 +82,8 @@ public class Question1 extends AppCompatActivity {
 
             editor.apply();//aplica informações
 
-            System.out.println("errado");
-
             //MUDANDO DE TELA
-            Intent i = new Intent(getApplicationContext(), Question2.class);
+            Intent i = new Intent(getApplicationContext(), Question6.class);
 
             startActivity(i);
 

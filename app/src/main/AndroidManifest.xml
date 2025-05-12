@@ -13,6 +13,39 @@
         android:theme="@style/Theme.CountryFlagQuiz"
         tools:targetApi="31">
         <activity
+            android:name=".Score"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.questions.Question1"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.questions.Question2"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.questions.Question3"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.questions.Question4"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.questions.Question5"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.questions.Question6"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.questions.Question7"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.questions.Question8"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.questions.Question9"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.questions.Question10"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

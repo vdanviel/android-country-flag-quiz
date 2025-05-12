@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.questions.Question1">
+    tools:context=".quiz.questions.Question6">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,35 +36,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="258dp"
                 android:layout_margin="20dp"
-                app:srcCompat="@drawable/angola" />
+                app:srcCompat="@drawable/belgica" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:id="@+id/radioButton1"
+                    android:id="@+id/correct"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Angola" />
+                    android:text="Belgica" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="França" />
+                    android:text="Equador" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Grécia" />
+                    android:text="Marrocos" />
 
                 <RadioButton
-                    android:id="@+id/correct"
+                    android:id="@+id/radioButton4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="India" />
+                    android:text="China" />
             </RadioGroup>
 
             <Button
@@ -80,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="giveUp"
                 android:text="Desistir" />
+
         </LinearLayout>
     </ScrollView>
 

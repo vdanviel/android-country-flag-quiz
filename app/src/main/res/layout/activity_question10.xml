@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.questions.Question1">
+    tools:context=".quiz.questions.Question10">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,40 +31,39 @@
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="258dp"
-                android:layout_margin="20dp"
-                app:srcCompat="@drawable/angola" />
-
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="306dp"
+                    app:srcCompat="@drawable/hongkong" />
 
                 <RadioButton
                     android:id="@+id/radioButton1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Angola" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="França" />
-
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Grécia" />
+                    android:text="Itália" />
 
                 <RadioButton
                     android:id="@+id/correct"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="India" />
+                    android:text="Hong Kong" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cuba" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guatemala" />
             </RadioGroup>
 
             <Button
@@ -80,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="giveUp"
                 android:text="Desistir" />
+
         </LinearLayout>
     </ScrollView>
 

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.questions.Question1">
+    tools:context=".quiz.questions.Question3">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="258dp"
                 android:layout_margin="20dp"
-                app:srcCompat="@drawable/angola" />
+                app:srcCompat="@drawable/egito" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -46,25 +46,25 @@
                     android:id="@+id/radioButton1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Angola" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="França" />
-
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Grécia" />
+                    android:text="Suíça" />
 
                 <RadioButton
                     android:id="@+id/correct"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="India" />
+                    android:text="Egito" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tailândia" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paquistão" />
             </RadioGroup>
 
             <Button
@@ -80,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="giveUp"
                 android:text="Desistir" />
+
         </LinearLayout>
     </ScrollView>
 
